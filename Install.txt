@@ -37,7 +37,7 @@ sudo chmod 0755 /usr/local/bin/docker-compose
 # Clean up
 cd /tmp
 rm -Rf /tmp/compose
-#docker system prune -af
+#sudo docker system prune -af
 
 # Verify
 which docker-compose # /usr/local/bin/docker-compose
