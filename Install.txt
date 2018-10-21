@@ -10,6 +10,7 @@ sudo curl -fsSL get.docker.com -o get-docker.sh && sudo sh get-docker.sh
 # Allow the current logged user (probably "pi") to run Docker without typing sudo in the future
 sudo groupadd docker # If the group already exists, that is ok
 sudo gpasswd -a $USER docker
+sudo usermod -a -G docker pi
 newgrp docker
 
 # Optional: Add other users (If you have another Linux login user named "bob" that also needs to run Docker)
@@ -42,3 +43,15 @@ rm -Rf /tmp/compose
 # Verify
 which docker-compose # /usr/local/bin/docker-compose
 docker-compose --version
+
+
+# Reboot the Raspberry Pi
+sudo reboot
+
+# SSH log-in to your Raspberry Pi as user "pi"
+ssh pi@ipAddressOfYourPi
+
+# Verify that Docker started automatically and that commands work!
+docker --version
+docker-compose --version
+docker run hello-world # Should not need sudo to work!
