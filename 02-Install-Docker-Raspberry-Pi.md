@@ -79,6 +79,7 @@ sudo reboot
 ssh pi@ipAddressOfYourPi
 
 # Verify that Docker started automatically and that commands work!
+vcgencmd measure_temp
 docker --version
 docker-compose --version
 docker run hello-world # Should not need sudo to work!
