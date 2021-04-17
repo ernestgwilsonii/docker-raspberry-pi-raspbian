@@ -84,3 +84,10 @@ docker --version
 docker-compose --version
 docker run hello-world # Should not need sudo to work!
 ```
+
+### Create or join a Docker Swarm to use Docker Compose (future)
+```
+# REF: https://docs.docker.com/engine/swarm/swarm-tutorial/create-swarm/
+docker swarm init
+# To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions
+```
