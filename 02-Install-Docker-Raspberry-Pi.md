@@ -40,7 +40,7 @@ docker run hello-world
 
 # Install docker-compose
 sudo apt update -y
-sudo apt install -y python3-pip libffi-dev
+sudo apt install -y python3-pip libffi-dev git htop jq
 sudo pip3 install docker-compose
 
 # Verify
